@@ -7,6 +7,14 @@ import requests
 
 openai_secret_key = api_key
 
+
+
+@api_view(['GET','POST'])
+def testHello(request):
+    return Response({'text': 'Hello World!123'})
+
+
+
 @api_view(['GET','POST'])
 def chatgpt(request):
     if request.method == 'GET':
